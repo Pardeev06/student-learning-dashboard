@@ -1,0 +1,340 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100">
+  <div class="flex">
+   <!-- Sidebar -->
+   <div class="w-1/5 bg-white h-screen p-5">
+    <div class="flex items-center mb-10">
+     <img alt="Logo" class="mr-3" src="https://static.vecteezy.com/system/resources/previews/022/123/337/original/user-icon-profile-icon-account-icon-login-sign-line-vector.jpg" height="20" width="20"/>
+     <span class="text-xl font-bold">
+      DASHBOARD
+     </span>
+    </div>
+    <nav class="space-y-4">
+     <a class="flex items-center text-gray-600 hover:text-black" href="#">
+      <i class="fas fa-home mr-3">
+      </i>
+      Home
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="profile.html">
+      <i class="fas fa-user mr-3">
+      </i>
+      Profile
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="analytics.html">
+      <i class="fas fa-chart-line mr-3">
+      </i>
+      Analytics
+     </a>
+    
+     <a class="flex items-center text-gray-600 hover:text-black" href="#">
+      <i class="fas fa-cog mr-3">
+      </i>
+      Settings
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="help.html">
+      <i class="fas fa-question-circle mr-3">
+      </i>
+      Help
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="login.html">
+      <i class="fas fa-sign-in-alt mr-3">
+      </i>
+      login
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black mt-10" href="#">
+      <i class="fas fa-sign-out-alt mr-3">
+      </i>
+      Log out
+     </a>
+    </nav>
+   </div>
+   <!-- Main Content -->
+   <div class="w-4/5 p-10">
+    <h1 class="text-3xl font-bold mb-5">
+     Skills
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+     <div class="bg-white p-5 rounded-lg shadow-md text-center">
+      <img alt="Web Development Icon" class="mx-auto mb-3" src="https://th.bing.com/th/id/OIP.FH0mek05AQHD4pD9RM7HLwHaH6?rs=1&pid=ImgDetMain"  width="40" height="40"/>
+      <h2 class="text-xl font-bold mb-2">
+       Web Development
+      </h2>
+      <p class="text-gray-600 mb-3">
+       Join Over 1 million Students.
+      </p>
+      <button class="bg-orange-500 text-white px-4 py-2 rounded">
+       Get Started
+      </button>
+     </div>
+     <div class="bg-white p-5 rounded-lg shadow-md text-center">
+      <img alt="WordPress Icon" class="mx-auto mb-3" width="40" height="40" src="https://th.bing.com/th/id/OIP.Q5K3ZcL44_iWH0CfOeyh-AHaHW?rs=1&pid=ImgDetMain"/>
+      <h2 class="text-xl font-bold mb-2">
+       WordPress
+      </h2>
+      <p class="text-gray-600 mb-3">
+       Join Over 3 million Students.
+      </p>
+      <button class="bg-orange-500 text-white px-4 py-2 rounded">
+       Get Started
+      </button>
+     </div>
+     <div class="bg-white p-5 rounded-lg shadow-md text-center">
+      <img alt="Graphic Design Icon" class="mx-auto mb-3" width="40" height="40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg.png"/>
+      <h2 class="text-xl font-bold mb-2">
+       Graphic Design
+      </h2>
+      <p class="text-gray-600 mb-3">
+       Join Over 2 million Students.
+      </p>
+      <button class="bg-orange-500 text-white px-4 py-2 rounded">
+       Get Started
+      </button>
+     </div>
+     <div class="bg-white p-5 rounded-lg shadow-md text-center">
+      <img alt="iOS Dev Icon" class="mx-auto mb-3" width="40" height="40" src="https://developer.apple.com/news/images/og/apple-developer-og.png"/>
+      <h2 class="text-xl font-bold mb-2">
+       iOS Dev
+      </h2>
+      <p class="text-gray-600 mb-3">
+       Join Over 1 million Students.
+      </p>
+      <button class="bg-orange-500 text-white px-4 py-2 rounded">
+       Get Started
+      </button>
+     </div>
+    </div>
+    <h1 class="text-3xl font-bold mb-5">
+     My Courses
+    </h1>
+    <div class="bg-white p-5 rounded-lg shadow-md">
+     <div class="flex space-x-5 mb-5">
+      <button id="in-progress" class="text-black border-b-2 border-black pb-2" onclick="toggleCourses('in-progress')">
+       In Progress
+      </button>
+      <button id="explore" class="text-gray-600 pb-2" onclick="toggleCourses('explore')">
+       Explore
+      </button>
+      <button id="incoming" class="text-gray-600 pb-2" onclick="toggleCourses('incoming')">
+       Upcoming
+      </button>
+      <button id="finished" class="text-gray-600 pb-2" onclick="toggleCourses('finished')">
+       Finished
+      </button>
+     </div>
+     <div id="in-progress-courses" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+       <img alt="HTML Icon" class="mx-auto mb-3" src="https://i.pinimg.com/originals/ca/e1/b4/cae1b4f6b223fe5a7bb712b680cffa67.png" width="80" height="80"/>
+       <h2 class="text-xl font-bold mb-2">
+        HTML
+       </h2>
+       <p class="text-gray-600 mb-3">
+        80% - Progress
+       </p>
+       <a href="https://www.coursera.org/learn/html" target="_blank" class="bg-black text-white px-4 py-2 rounded">
+        continue
+       </a>
+      </div>
+      <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+       <img alt="CSS Icon" class="mx-auto mb-3" src="https://th.bing.com/th/id/OIP.yUIb5S_kj98Eg5tT-Onx1AHaHa?rs=1&pid=ImgDetMain" width="80" height="80"/>
+       <h2 class="text-xl font-bold mb-2">
+        CSS
+       </h2>
+       <p class="text-gray-600 mb-3">
+        50% - Progress
+       </p>
+       <a href="https://www.w3schools.com/Css/" target="_blank"  class="bg-black text-white px-4 py-2 rounded">
+        continue
+       </a>
+      </div>
+      <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+       <img alt="JavaScript Icon" class="mx-auto mb-3" src="https://www.freepnglogos.com/uploads/javascript-png/black-js-logo-symbol-icon-29.png" width="80" height="80"/>
+       <h2 class="text-xl font-bold mb-2">
+        JavaScript
+       </h2>
+       <p class="text-gray-600 mb-3">
+        30% - Progress
+       </p>
+       <a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank" class="bg-black text-white px-4 py-2 rounded">
+        continue
+       </a>
+      </div>
+     </div>
+     <div id="explore-courses" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 hidden">
+      <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+       <img alt="React Icon" class="mx-auto mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="80" height="80"/>
+       <h2 class="text-xl font-bold mb-2">
+        React
+       </h2>
+       <p class="text-gray-600 mb-3">
+        0% - Progress
+       </p>
+       <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=KEEPLEARNING" target="_blank" class="bg-black text-white px-4 py-2 rounded">
+        start
+       </a>
+      </div>
+      <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+        <img alt="Angular Icon" class="mx-auto mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" width="80" height="80"/>
+        <h2 class="text-xl font-bold mb-2">
+         Angular
+        </h2>
+        <p class="text-gray-600 mb-3">
+         0% - Progress
+        </p>
+        <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=KEEPLEARNING" target="_blank" target="_blank" class="bg-black text-white px-4 py-2 rounded">
+         start
+        </a>
+       </div>
+       <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+        <img alt="Vue Icon" class="mx-auto mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" width="80" height="80"/>
+        <h2 class="text-xl font-bold mb-2">
+         Vue
+        </h2>
+        <p class="text-gray-600 mb-3">
+         0% - Progress
+        </p>
+        <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=KEEPLEARNING" target="_blank" target="_blank" target="_blank" target="_blank" class="bg-black text-white px-4 py-2 rounded">
+         start
+        </a>
+       </div>
+      </div>
+      <div id="incoming-courses" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 hidden">
+       <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+        <img alt="Python Icon" class="mx-auto mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" width="80" height="80"/>
+        <h2 class="text-xl font-bold mb-2">
+         Python
+        </h2>
+        <p class="text-gray-600 mb-3">
+         Upcoming
+        </p>
+        <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=KEEPLEARNING" target="_blank"  class="bg-black text-white px-4 py-2 rounded">
+         notify me
+        </a>
+       </div>
+       <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+        <img alt="Java Icon" class="mx-auto mb-3" src="https://th.bing.com/th/id/OIP.Vp60JtW1D7LOTMwoIbzInwHaHa?rs=1&pid=ImgDetMain" width="80" height="80"/>
+        <h2 class="text-xl font-bold mb-2">
+         Java
+        </h2>
+        <p class="text-gray-600 mb-3">
+         Upcoming
+        </p>
+        <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=KEEPLEARNING" target="_blank" java class="bg-black text-white px-4 py-2 rounded">
+         notify me
+        </a>
+       </div>
+       <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+        <img alt="C++ Icon" class="mx-auto mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" width="80" height="80"/>
+        <h2 class="text-xl font-bold mb-2">
+         C++
+        </h2>
+        <p class="text-gray-600 mb-3">
+         Upcoming
+        </p>
+        <a href="https://www.freecodecamp.org/news/learn-c-with-free-31-hour-course/" target="_blank" class="bg-black text-white px-4 py-2 rounded">
+         notify me
+        </a>
+       </div>
+      </div>
+      <div id="finished-courses" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 hidden">
+       <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+        <img alt="Ruby Icon" class="mx-auto mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/1200px-Ruby_logo.svg.png" width="80" height="80"/>
+        <h2 class="text-xl font-bold mb-2">
+         Ruby
+        </h2>
+        <p class="text-gray-600 mb-3">
+         Finished
+        </p>
+        <a href="https://www.freecodecamp.org/news/learn-c-with-free-31-hour-course/" target="_blank" class="bg-black text-white px-4 py-2 rounded">
+         review
+        </a>
+       </div>
+       <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+        <img alt="Swift Icon" class="mx-auto mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/1200px-Swift_logo.svg.png" width="80" height="80"/>
+        <h2 class="text-xl font-bold mb-2">
+         Swift
+        </h2>
+        <p class="text-gray-600 mb-3">
+         Finished
+        </p>
+        <a href="https://www.freecodecamp.org/news/learn-c-with-free-31-hour-course/" target="_blank" class="bg-black text-white px-4 py-2 rounded">
+         review
+        </a>
+       </div>
+       <div class="bg-gray-100 p-5 rounded-lg shadow-md text-center">
+        <img alt="Go Icon" class="mx-auto mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png" width="80" height="80"/>
+        <h2 class="text-xl font-bold mb-2">
+         Go
+        </h2>
+        <p class="text-gray-600 mb-3">
+         Finished
+        </p>
+        <a a href="https://www.freecodecamp.org/news/learn-c-with-free-31-hour-course/" target="_blank" class="bg-black text-white px-4 py-2 rounded">
+         review
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script>
+    function toggleCourses(course) {
+     const inProgressCourses = document.getElementById('in-progress-courses');
+     const exploreCourses = document.getElementById('explore-courses');
+     const incomingCourses = document.getElementById('incoming-courses');
+     const finishedCourses = document.getElementById('finished-courses');
+     const inProgressButton = document.getElementById('in-progress');
+     const exploreButton = document.getElementById('explore');
+     const incomingButton = document.getElementById('incoming');
+     const finishedButton = document.getElementById('finished');
+ 
+     if (course === 'in-progress') {
+      inProgressCourses.classList.remove('hidden');
+      exploreCourses.classList.add('hidden');
+      incomingCourses.classList.add('hidden');
+      finishedCourses.classList.add('hidden');
+      inProgressButton.classList.add('text-black', 'border-b-2', 'border-black', 'pb-2');
+      exploreButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+      incomingButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+      finishedButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+     } else if (course === 'explore') {
+      inProgressCourses.classList.add('hidden');
+      exploreCourses.classList.remove('hidden');
+      incomingCourses.classList.add('hidden');
+      finishedCourses.classList.add('hidden');
+      inProgressButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+      exploreButton.classList.add('text-black', 'border-b-2', 'border-black', 'pb-2');
+      incomingButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+      finishedButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+     } else if (course === 'incoming') {
+      inProgressCourses.classList.add('hidden');
+      exploreCourses.classList.add('hidden');
+      incomingCourses.classList.remove('hidden');
+      finishedCourses.classList.add('hidden');
+      inProgressButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+      exploreButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+      incomingButton.classList.add('text-black', 'border-b-2', 'border-black', 'pb-2');
+      finishedButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+     } else if (course === 'finished') {
+      inProgressCourses.classList.add('hidden');
+      exploreCourses.classList.add('hidden');
+      incomingCourses.classList.add('hidden');
+      finishedCourses.classList.remove('hidden');
+      inProgressButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+      exploreButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+      incomingButton.classList.remove('text-black', 'border-b-2', 'border-black', 'pb-2');
+      finishedButton.classList.add('text-black', 'border-b-2', 'border-black', 'pb-2');
+     }
+    }
+   </script>
+  </body>
+ </html>

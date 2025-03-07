@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Skills Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .main-content {
+            width: 75%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            background-color: #ddd;
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+        .progress {
+            height: 100%;
+            border-radius: 10px;
+        }
+        .task, .resource, .media {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .task h4, .resource h4, .media h4 {
+            margin: 0;
+            color: #444;
+        }
+        .task p, .resource p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .completed {
+            background-color: #28a745; /* Green color for completed tasks */
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .pdf-container {
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+        .pdf-container embed {
+            width: 100%;
+            height: 400px;
+        }
+        .head{
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: 20px;
+            margin: 15px;
+            padding: 5px;
+
+        }
+        .button1{
+            background-color: #007BFF;
+            color: white;
+            padding: 5px;
+            margin: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+
+        }
+        .button1:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com">
+  </script>
+</head>
+<body>
+    <div class="container">
+        
+   <!-- Sidebar -->
+   <div class="w-1/5 bg-white h-screen p-5">
+    <div class="flex items-center mb-10">
+     <img alt="Logo" class="mr-3" src="https://static.vecteezy.com/system/resources/previews/022/123/337/original/user-icon-profile-icon-account-icon-login-sign-line-vector.jpg" height="20" width="20"/>
+     <span class="text-xl font-bold">
+      DASHBOARD
+     </span>
+    </div>
+    <nav class="space-y-4">
+     <a class="flex items-center text-gray-600 hover:text-black" href="index.html">
+      <i class="fas fa-home mr-3">
+      </i>
+      Home
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="profile.html">
+      <i class="fas fa-user mr-3">
+      </i>
+      Profile
+     </a>
+    
+     <a class="flex items-center text-gray-600 hover:text-black" href="#">
+      <i class="fas fa-chart-line mr-3">
+      </i>
+      Analytics
+     </a>
+    
+     <a class="flex items-center text-gray-600 hover:text-black" href="#">
+      <i class="fas fa-cog mr-3">
+      </i>
+      Settings
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="help.html">
+      <i class="fas fa-question-circle mr-3">
+      </i>
+      Help
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="login.html">
+        <i class="fas fa-sign-in-alt mr-3">
+        </i>
+        login
+       </a>
+     <a class="flex items-center text-gray-600 hover:text-black mt-10" href="logout.html">
+      <i class="fas fa-sign-out-alt mr-3">
+      </i>
+      Log out
+     </a>
+    </nav>
+   </div>
+        
+       
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Skills Progress Section -->
+            <div class="section">
+                <h3>Learning Progress</h3>
+                <div>
+                    <p>HTML & CSS: 75%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%; background-color: #4caf50;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p>JavaScript: 50%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%; background-color: #ff9800;"></div>
+                    </div>
+                </div>
+                <div>
+                    <p>Python: 60%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%; background-color: #2196f3;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Tasks Section -->
+            <div class="section">
+                <h3>Upcoming Tasks</h3>
+                <div class="task" id="task1">
+                    <h4>Complete CSS Flexbox Module</h4>
+                    <p>Due: Feb 5, 2025</p>
+                    <button class="button" onclick="markAsComplete('task1', this)">Mark as Complete</button>
+                </div>
+                <div class="task" id="task2">
+                    <h4>Finish JavaScript Project</h4>
+                    <p>Due: Feb 10, 2025</p>
+                    <button class="button" onclick="markAsComplete('task2', this)">Mark as Complete</button>
+                </div>
+            </div>
+
+            <!-- Learning Resources Section -->
+            <div class="section">
+                <h3>Learning Resources</h3>
+                <div class="resource">
+                    <h4>MDN Web Docs</h4>
+                    <p>Comprehensive documentation for HTML, CSS, and JavaScript.</p>
+                    <a href="https://developer.mozilla.org/" target="_blank" class="button">Visit</a>
+                </div>
+                <div class="resource">
+                    <h4>FreeCodeCamp</h4>
+                    <p>Interactive tutorials for web development and more.</p>
+                    <a href="https://www.freecodecamp.org/" target="_blank" class="button">Visit</a>
+                </div>
+            </div>
+
+            <!-- Embedded Video Section -->
+            <div class="section media">
+                <h3>Video Tutorials</h3>
+                <div>
+                    <h4>Learn Flexbox - YouTube</h4>
+                    <iframe src="https://www.youtube.com/embed/fYq5PXgSsbE" title="Learn Flexbox"></iframe>
+                </div>
+                <div>
+                    <h4>JavaScript Basics</h4>
+                    <iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" title="JavaScript Basics"></iframe>
+                </div>
+            </div>
+
+            <!-- PDFs Section -->
+            <div class="section media">
+                <h3>Learning PDFs</h3>
+                <div class="pdf-container">
+                    <h2 class="head">FULL STACK DEVELOPMENT COURSE</h2>
+                    <button type="submit" class="button1"><a href="https://wtf.tw/ref/duckett.pdf">Visit</a></button>
+                </div>
+                <div class="pdf-container">
+                    <h2 class="head"> Projects and sources code pdf</h2>
+                    <button type="submit" class="button1"><a href="https://www.fynd.academy/blog/html-projects">Visit</a></button>
+                </div>
+            </div>
+
+            <!-- Images Section -->
+            <div class="section media">
+                <h3>Roadmaps of Career development</h3>
+                
+                <div class="img-container">
+                    <img src="https://i.pinimg.com/736x/36/b3/49/36b3494ea252a5efa6abf5072c45e438.jpg" alt="Web Development">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to mark a task as complete
+        function markAsComplete(taskId, button) {
+            var task = document.getElementById(taskId);
+            task.style.backgroundColor = '#d4edda';  // Change background to light green
+            task.querySelector('h4').style.textDecoration = 'line-through'; // Strike-through the task name
+            button.innerText = "Completed";  // Change button text to 'Completed'
+            button.classList.add('completed'); // Change button color to green
+            button.setAttribute('disabled', 'true'); // Disable the button after marking as complete
+        }
+    </script>
+</body>
+</html>

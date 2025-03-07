@@ -1,0 +1,116 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sign Up
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100">
+  <div class="flex">
+   <!-- Sidebar -->
+   <div class="w-1/5 bg-white h-screen p-5">
+    <div class="flex items-center mb-10">
+     <img alt="Logo" class="mr-3" src="https://static.vecteezy.com/system/resources/previews/022/123/337/original/user-icon-profile-icon-account-icon-login-sign-line-vector.jpg" height="20" width="20"/>
+     <span class="text-xl font-bold">
+      DASHBOARD
+     </span>
+    </div>
+    <nav class="space-y-4">
+     <a class="flex items-center text-gray-600 hover:text-black" href="index.html">
+      <i class="fas fa-home mr-3">
+      </i>
+      Home
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="profile.html">
+      <i class="fas fa-user mr-3">
+      </i>
+      Profile
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="analytics.html">
+      <i class="fas fa-chart-line mr-3">
+      </i>
+      Analytics
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="#">
+      <i class="fas fa-cog mr-3">
+      </i>
+      Settings
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="help.html">
+      <i class="fas fa-question-circle mr-3">
+      </i>
+      Help
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black" href="login.html">
+      <i class="fas fa-sign-in-alt mr-3">
+      </i>
+      login
+     </a>
+     <a class="flex items-center text-gray-600 hover:text-black mt-10" href="logout.html">
+      <i class="fas fa-sign-out-alt mr-3">
+      </i>
+      Log out
+     </a>
+    </nav>
+   </div>
+   <!-- Main Content -->
+   <div class="w-4/5 p-10">
+    <div class="bg-white rounded-lg shadow-lg flex flex-col md:flex-row w-full max-w-4xl">
+     <div class="md:w-1/2 p-6 flex items-center justify-center">
+      <img alt="Illustration of a person working on a laptop at a desk with a plant and a trash bin nearby" src="https://th.bing.com/th/id/OIP.Jl9a_Tl8A5QZ13D_KGbQOAHaE9?rs=1&pid=ImgDetMain"/>
+     </div>
+     <div class="md:w-1/2 p-8">
+      <h2 class="text-2xl font-bold mb-4">
+       Sign up to SkillPath
+      </h2>
+      <button class="w-full bg-white text-gray-700 border border-gray-300 rounded-lg py-2 mb-4 flex items-center justify-center">
+       <i class="fab fa-google mr-2">
+       </i>
+       Sign up with Google
+      </button>
+      <p class="text-center text-gray-500 mb-4">
+       or sign up with email
+      </p>
+      <form>
+       <div class="mb-4">
+        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Your name" type="text"/>
+       </div>
+       <div class="mb-4">
+        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Email address" type="email"/>
+       </div>
+       <div class="mb-4">
+        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Password" type="password"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-gray-700 mb-2" for="role">
+         Select Role:
+        </label>
+        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg" id="role">
+         <option>
+          Instructor
+         </option>
+         <option>
+          Student
+         </option>
+        </select>
+       </div>
+       <button class="w-full bg-blue-500 text-white py-2 rounded-lg">
+        Sign Up
+       </button>
+      </form>
+      <p class="text-center text-gray-500 mt-4">
+       Already have an account?
+       <a class="text-blue-500" href="#">
+        Login here
+       </a>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
